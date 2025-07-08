@@ -1,10 +1,14 @@
 {
-  "name": "Pharmatox Flutter Ortamı",
-  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  "name": "Pharmatox Cloud Workspace",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:20",
+
   "features": {
-    "ghcr.io/devcontainers/features/flutter:1": {},
-    "ghcr.io/firebase/firebase-tools:1": {}
+    "ghcr.io/devcontainers/features/firebase-tools:1": {},
+    "ghcr.io/devcontainers/features/git:1": {}
   },
+
+  "postCreateCommand": "firebase --version && node --version && npm --version",
+
   "customizations": {
     "vscode": {
       "extensions": [
@@ -12,6 +16,5 @@
         "Dart-Code.dart-code"
       ]
     }
-  },
-  "postCreateCommand": "flutter doctor"
+  }
 }
